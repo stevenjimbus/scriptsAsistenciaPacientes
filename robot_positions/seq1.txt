@@ -1,0 +1,2 @@
+"LShoulderPitch","LShoulderRoll","LElbowYaw","LElbowRoll","LWristYaw","LHand","RShoulderPitch","RShoulderRoll","RElbowYaw","RElbowRoll","RWristYaw","RHand",
+0.0659611,0.0368156,-0.078233,-0.569107,-1.33309,0.706503,-0.0107379,-0.00920391,-0.185612,0.549165,1.63827,0.653779,
