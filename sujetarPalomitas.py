@@ -14,6 +14,7 @@ import math
 
 
 def main(session):
+    print("Iniciando sujetarCafe")
 
 
     motion_service  = session.service("ALMotion")
@@ -23,54 +24,48 @@ def main(session):
     motion_service.setMoveArmsEnabled(False,False)  
 
     '''
-
-
-    names  = ["LShoulderPitch","RShoulderPitch"] 
-    angles  = [math.radians(20),math.radians(20)]
-    fractionMaxSpeed  = 0.5
-    motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(5)
-
-    names  = ["LElbowRoll","RElbowRoll"] 
-    angles  = [math.radians(-60),math.radians(60)]
-    fractionMaxSpeed  = 0.5
-    motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(5)
-
-    names  = ["LShoulderRoll","RShoulderRoll"] 
-    angles  = [math.radians(40),math.radians(-40)]
-    fractionMaxSpeed  = 0.5
-    motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(5)
-
-
-    names  = ["LElbowYaw","RElbowYaw"] 
-    angles  = [math.radians(0),math.radians(0)]
-    fractionMaxSpeed  = 0.5
-    motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(5)
-
-    names  = ["LWristYaw","RWristYaw"] 
-    angles  = [math.radians(-90),math.radians(90)]
+    names  = ["LShoulderRoll","LHand","RShoulderRoll","RHand"] 
+    angles  = [math.radians(18),1,math.radians(-18),1]
     fractionMaxSpeed  = 0.5
     motion_service.setAngles(names, angles, fractionMaxSpeed)
     time.sleep(5)
     '''
-    names  = ["LShoulderRoll","LHand","RShoulderRoll","RHand"] 
-    angles  = [math.radians(22),1,math.radians(-22),1]
     fractionMaxSpeed  = 0.7
-    motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(5)
 
-    names  = ["LShoulderRoll","LHand","RShoulderRoll","RHand"] 
-    angles  = [math.radians(17),1,math.radians(-17),1]
-    fractionMaxSpeed  = 0.7
+    names  = ["LHand"] 
+    angles  = [1]    
     motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(5)
+    time.sleep(2)
+
+    names  = ["RHand"] 
+    angles  = [1]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(2)
+
+    names  = ["LShoulderRoll"] 
+    angles  = [math.radians(18)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)    
+
+    names  = ["RShoulderRoll"] 
+    angles  = [math.radians(-18)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)
+
+    names  = ["LShoulderRoll"] 
+    angles  = [math.radians(13)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)    
+
+    names  = ["RShoulderRoll"] 
+    angles  = [math.radians(-13)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)
 
 
     
 
+    print("finaliza sujetarCafe")
 
 
 

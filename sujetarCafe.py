@@ -14,6 +14,7 @@ import math
 
 
 def main(session):
+    print("Iniciando sujetarCafe")
 
 
     motion_service  = session.service("ALMotion")
@@ -22,22 +23,49 @@ def main(session):
     motion_service.setStiffnesses("RArm", 1.0)
     motion_service.setMoveArmsEnabled(False,False)  
 
-
+    '''
     names  = ["LShoulderRoll","LHand","RShoulderRoll","RHand"] 
-    angles  = [math.radians(22),1,math.radians(-22),1]
-    fractionMaxSpeed  = 0.7
+    angles  = [math.radians(18),1,math.radians(-18),1]
+    fractionMaxSpeed  = 0.5
     motion_service.setAngles(names, angles, fractionMaxSpeed)
     time.sleep(5)
-
-    names  = ["LShoulderRoll","LHand","RShoulderRoll","RHand"] 
-    angles  = [math.radians(19),1,math.radians(-19),1]
+    '''
     fractionMaxSpeed  = 0.7
+
+    names  = ["LHand"] 
+    angles  = [1]    
     motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(5)
+    time.sleep(2)
+
+    names  = ["RHand"] 
+    angles  = [1]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(2)
+
+    names  = ["LShoulderRoll"] 
+    angles  = [math.radians(18)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)    
+
+    names  = ["RShoulderRoll"] 
+    angles  = [math.radians(-18)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)
+
+    names  = ["LShoulderRoll"] 
+    angles  = [math.radians(13)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)    
+
+    names  = ["RShoulderRoll"] 
+    angles  = [math.radians(-13)]    
+    motion_service.setAngles(names, angles, fractionMaxSpeed)
+    time.sleep(3)
 
 
     
 
+    print("finaliza sujetarCafe")
 
 
 

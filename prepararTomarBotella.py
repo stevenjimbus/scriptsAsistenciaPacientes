@@ -14,7 +14,6 @@ import math
 
 
 def main(session):
-    print("Iniciando sujetarCafe")
 
 
     motion_service  = session.service("ALMotion")
@@ -23,49 +22,44 @@ def main(session):
     motion_service.setStiffnesses("RArm", 1.0)
     motion_service.setMoveArmsEnabled(False,False)  
 
-    '''
-    names  = ["LShoulderRoll","LHand","RShoulderRoll","RHand"] 
-    angles  = [math.radians(18),1,math.radians(-18),1]
-    fractionMaxSpeed  = 0.5
+    
+
+
+    names  = ["LShoulderPitch","RShoulderPitch"] 
+    angles  = [math.radians(10),math.radians(10)]
+    fractionMaxSpeed  = 0.2
     motion_service.setAngles(names, angles, fractionMaxSpeed)
     time.sleep(5)
-    '''
-    fractionMaxSpeed  = 0.7
 
-    names  = ["LHand"] 
-    angles  = [1]    
+    names  = ["LElbowRoll","RElbowRoll"] 
+    angles  = [math.radians(-60),math.radians(60)]
+    fractionMaxSpeed  = 0.2
     motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(2)
+    time.sleep(5)
 
-    names  = ["RHand"] 
-    angles  = [1]    
+    names  = ["LShoulderRoll","RShoulderRoll"] 
+    angles  = [math.radians(40),math.radians(-40)]
+    fractionMaxSpeed  = 0.2
     motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(2)
+    time.sleep(5)
 
-    names  = ["LShoulderRoll"] 
-    angles  = [math.radians(18)]    
+
+    names  = ["LElbowYaw","RElbowYaw"] 
+    angles  = [math.radians(0),math.radians(0)]
+    fractionMaxSpeed  = 0.2
     motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(3)    
+    time.sleep(5)
 
-    names  = ["RShoulderRoll"] 
-    angles  = [math.radians(-18)]    
+    names  = ["LWristYaw","RWristYaw"] 
+    angles  = [math.radians(-90),math.radians(90)]
+    fractionMaxSpeed  = 0.2
     motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(3)
-
-    names  = ["LShoulderRoll"] 
-    angles  = [math.radians(13)]    
-    motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(3)    
-
-    names  = ["RShoulderRoll"] 
-    angles  = [math.radians(-13)]    
-    motion_service.setAngles(names, angles, fractionMaxSpeed)
-    time.sleep(3)
-
+    time.sleep(5)
+    
+    
 
     
 
-    print("finaliza sujetarCafe")
 
 
 
