@@ -53,12 +53,12 @@ def main(session):
     time.sleep(3)
 
     names  = ["LShoulderRoll"] 
-    angles  = [math.radians(13)]    
+    angles  = [math.radians(14)]    
     motion_service.setAngles(names, angles, fractionMaxSpeed)
     time.sleep(3)    
 
     names  = ["RShoulderRoll"] 
-    angles  = [math.radians(-13)]    
+    angles  = [math.radians(-14)]    
     motion_service.setAngles(names, angles, fractionMaxSpeed)
     time.sleep(3)
 
